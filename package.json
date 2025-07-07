@@ -1,0 +1,34 @@
+{
+  "name": "setu-web-dev-2",
+  "version": "1.0.0",
+  "description": "Project for Setu Web Development Course",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "express-handlebars": "^8.0.2",
+    "fs-extra": "^11.3.0",
+    "lowdb": "^7.0.1",
+    "uuid": "^11.1.0"
+  },
+  "repository": {
+    "url": "https://github.com/KristianColville1/setu-web-dev-2.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT",
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
+}

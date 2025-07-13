@@ -1,8 +1,7 @@
 # setu-web-dev-2
 
-
-## packages
-module-alias for 
+## icons
+https://www.flaticon.com/packs/weather-538?word=weather
 
 
 ## Overview

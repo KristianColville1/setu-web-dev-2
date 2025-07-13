@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(fileUpload());
 app.engine(".hbs", engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
-app.set("views", "./views");
+app.set("views", "./src/views");
 app.use("/", router);
 
 const listener = app.listen(process.env.PORT || 4000, function () {

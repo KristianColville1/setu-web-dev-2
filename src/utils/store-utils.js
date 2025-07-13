@@ -4,7 +4,7 @@ import * as fs from "fs";
 
 export function initStore(dataType) {
   const store = {
-    file: `./models/${dataType}.json`,
+    file: `./src/models/${dataType}.json`,
     [dataType]: [],
   };
   const db = new Low(new JSONFile(store.file));

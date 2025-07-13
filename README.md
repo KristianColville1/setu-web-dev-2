@@ -52,10 +52,11 @@ Key practices:
 
 ### Git Scope & Branching
 
-| Branch   | Description                   |
-| -------- | ----------------------------- |
-| `main`   | Stable, release-ready version |
-|          |                               |
-| `rel1`   | Release 1                     |
-| `rel2`   | Release 2                     |
-| `rel3`   | Release 3                     |
+| Branch       | Description                   |
+| ------------ | ----------------------------- |
+| `main`       | Stable, release-ready version |
+|              |                               |
+| `baseline`   | Baseline project              |
+| `rel1`       | Release 1                     |
+| `rel2`       | Release 2                     |
+| `rel3`       | Release 3                     |

@@ -40,8 +40,12 @@ export const reportStore = {
     await db.write();
   },
 
-//   async updateReport(report, updateReport) {
-//     report.name = updateReport.name;
-//     await db.write();
-//   },
+  async updateReport(report, updateReport) {
+    report.code = updateReport.code;
+    report.temp = updateReport.temp;
+    report.windSpeed = updateReport.windSpeed;
+    report.windDirection = updateReport.windDirection;
+    report.pressure = updateReport.pressure;
+    await db.write();
+  },
 };

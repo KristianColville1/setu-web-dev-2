@@ -1,0 +1,13 @@
+{
+  "file": "./src/models/data/reports.json",
+  "reports": [
+    {
+      "code": "0",
+      "temp": "",
+      "windSpeed": "",
+      "windDirection": "",
+      "pressure": "",
+      "_id": "6aa04596-c0c3-4a54-bc48-daee4383c77d"
+    }
+  ]
+}

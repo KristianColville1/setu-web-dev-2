@@ -17,9 +17,8 @@ Developer: Kristian Colville
   * [Typography](#typography)
   * [Layout](#layout)
   * [Icons](#icons)
-  * [Use of Bulma](#use-of-bulma)
+  * [Leveraging Bulma](#leveraging-bulma)
 * [Technologies &amp; Tools](#technologies--tools)
-* [Languages Used](#languages-used)
 * [Features](#features)
   * [Baseline](#baseline)
   * [Release 1](#release-1)
@@ -49,6 +48,17 @@ Developer: Kristian Colville
 
 
 ## Project Goals
+
+WeatherTop is building a next-generation web platform that lets users create their own weather stations and effortlessly log atmospheric data. The application will:
+
+- **Deliver a modern, responsive UI** that looks great on any device  
+- **Pull real-time conditions from the OpenWeather API** for accurate, up-to-the-minute data  
+- **Visualise observations through intuitive dashboards and charts** so insights are easy to grasp  
+- **Prioritise accessibility and performance**, ensuring a fast, user-friendly experience
+
+By combining rich API data with thoughtful design, this project aims to turn raw weather numbers into clear, actionable insights for everyone.
+
+
 ### Personal Goals
 
 
@@ -59,14 +69,43 @@ Developer: Kristian Colville
 ## Design
 ### Color Scheme
 ### Typography
+
+At **WeatherTop**, we rely on **Bulma’s built-in type helpers** rather than juggling custom font files. Classes such as `.title`, `.subtitle`, and `.content` keep headings crisp and body text legible at every breakpoint.
+
+Bulma’s default sans-serif stack gives the app a clean, modern voice without extra downloads—ideal when users are loading live data out in the field.
+
 ### Layout
+
+Every WeatherTop page sits on **Bulma’s column and container grid**. This framework lets us:
+
+- Slot weather cards, station details, and forecast charts neatly into place  
+- Re-flow the layout from widescreen dashboards to pocket-sized views without fuss  
+- Use spacing helpers for breathing room, sparing us from one-off CSS tweaks
+
+The result is a layout that feels natural whether you’re tracking a storm on a laptop or checking temperatures from your phone.
+
 ### Icons
-### Use of Bulma
+### Leveraging Bulma
+
+Our UI/UX approach aimed to **minimize custom CSS** from the start. By leaning on Bulma’s handy spacing, alignment, and component helpers, we managed to:
+
+- **Trim development time by about 20 %** (by my estimate)  
+- **Maintain consistent visual patterns** across the interface  
+- **Simplify upkeep and future tweaks**
+
+We only added bespoke styles when Bulma couldn’t cover a specific need, keeping the stylesheet lean and tidy. The result is a responsive, polished interface that serves users well and stays friendly for developers to extend.
+
 
 
 ## Technologies &amp; Tools
-## Languages Used
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - The standard markup language used to structure the web pages and content of the application.
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS ) - Used for styling the application, enhancing layout, colors, and responsiveness.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The primary programming language powering the web app’s interactivity.
+- [Bulma CSS Framework](https://bulma.io/) - A modern, responsive CSS framework used for layout, typography, and UI components to minimize custom styling.
+- [Flaticon](https://www.flaticon.com/) - Source for the weather icons used in the app, providing clear and attractive visuals for weather conditions.
+- [Bulma Toggle extension](https://cdn.jsdelivr.net/npm/bulma-switch@2.0.4/dist/css/bulma-switch.min.css) - A Bulma extension utilized for toggle switches in the UI, improving user preference controls.
+- [Favicon](https://favicon.io/) - A favicon generator for the web app.
 
 ## Features
 ### Baseline

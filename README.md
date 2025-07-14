@@ -31,6 +31,16 @@ Developer: Kristian Colville
 * [Bugs](#bugs)
   * [Bug Details](#bug-details)
 * [Releases](#releases)
+  * [Overview](#overview)
+  * [Git Workflow](#git-workflow)
+  * [Development Strategy](#development-strategy)
+    * [Timeline](#timeline)
+    * [Git Scope & Branching](#git-scope--branching)
+  * [Release Results](#release-results)
+    * [Baseline](#baseline-1)
+    * [Release 1](#release-1-1)
+    * [Release 2](#release-2-1)
+    * [Release 3](#release-3-1)
 * [Development &amp; Deployment](#development--deployment)
   * [Version Control](#version-control)
   * [Cloning the Repository](#cloning-this-repository)
@@ -58,18 +68,28 @@ Developer: Kristian Colville
 ## Languages Used
 
 
+## Features
+### Baseline
+### Release 1
+### Release 2
+### Release 3
 
-## icons
-https://www.flaticon.com/packs/weather-538?word=weather
+## Data
 
+## Testing
+### Google Lighthouse Results
 
-## Overview
+## Bugs
+### Bug Details
+
+## Releases
+### Overview
 
 This repository documents the iterative development of the WeatherTop website assignment.
 
 Development follows a structured, branch-based workflow, progressing from initial Proof-of-Concepts (POCs) to full Releases. Each phase is tracked with dedicated branches and clear, incremental commits.
 
-## Git Workflow
+### Git Workflow
 
 Typical commands for managing branches:
 
@@ -81,7 +101,7 @@ git pull origin branch_name
 git push origin main
 ```
 
-## Development Strategy
+### Development Strategy
 
 The assignment is delivered in multiple iterations:
 
@@ -99,7 +119,7 @@ Key practices:
 
 ---
 
-### Timeline
+#### Timeline
 
 | Milestone                 | Date                 |
 | ------------------------- | -------------------- |
@@ -109,7 +129,7 @@ Key practices:
 
 ---
 
-### Git Scope & Branching
+#### Git Scope & Branching
 
 | Branch       | Description                   |
 | ------------ | ----------------------------- |
@@ -121,7 +141,12 @@ Key practices:
 | `rel3`       | Release 3                     |
 
 
-
+### Release Results
+#### Baseline
+#### Release 1
+#### Release 2
+#### Release 3
+#### Release 4
 
 ## Development & Deployment
 

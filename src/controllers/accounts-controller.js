@@ -48,7 +48,16 @@ export const accountsController = {
   },
 
   async getLoggedInUser(request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.weatherTop;
     return await userStore.getUserByEmail(userEmail);
   },
+
+  async getAuthenticatedUser(request, response) {
+    const user = await accountsController.getLoggedInUser(request);
+    if (!user) {
+      response.redirect("/login");
+      return null;
+    }
+    return user;
+  }
 };

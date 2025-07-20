@@ -1,7 +1,9 @@
-<form action="/dashboard/addstation" method="POST">
-    <div class="field">
-        <label class="label">Station Name</label>
-        <input class="input" type="text" placeholder="Enter station name" name="name">
+<form action="/dashboard/addstation" method="POST" class="box">
+<p>Add Station</p>
+    <div class="field is-grouped">
+        <input class="input" type="text" placeholder="Station Name" name="name" style="margin-right: 8px;">
+        <input class="input" type="text" placeholder="Latitude" name="latitude" style="margin-right: 8px;">
+        <input class="input" type="text" placeholder="Longitude" name="longitude" style="margin-right: 8px;">
+        <button class="button is-primary">Add Station</button>
     </div>
-    <button class="button is-primary">Add Station</button>
 </form>

@@ -1,9 +1,24 @@
 {
-  "file": "./src/models/stations.json",
+  "file": "./src/models/data/stations.json",
   "stations": [
     {
       "name": "test",
-      "_id": "417c18cb-ad60-4ac5-9ede-4110c6d5bc8d"
+      "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
+      "_id": "04f3d822-39a4-4f4e-8b1f-66f748221a31"
+    },
+    {
+      "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
+      "name": "a",
+      "latitude": "",
+      "longitude": "",
+      "_id": "fd68f13f-c11d-4297-9d21-bdf4212c70a2"
+    },
+    {
+      "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
+      "name": "b",
+      "latitude": "",
+      "longitude": "",
+      "_id": "77b6bf61-bd89-43d2-b932-ec77044d23f7"
     }
   ]
 }

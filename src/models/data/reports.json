@@ -8,6 +8,15 @@
       "windDirection": "",
       "pressure": "",
       "_id": "6aa04596-c0c3-4a54-bc48-daee4383c77d"
+    },
+    {
+      "code": "12",
+      "temp": "00",
+      "windSpeed": "000",
+      "windDirection": "00",
+      "pressure": "00",
+      "_id": "713b803c-2534-4fb8-8768-3017c891c434",
+      "stationID": "fd68f13f-c11d-4297-9d21-bdf4212c70a2"
     }
   ]
 }

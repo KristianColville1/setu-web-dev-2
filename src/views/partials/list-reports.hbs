@@ -1,8 +1,15 @@
 {{#each station.reports}}
 
-{{>report report=this}}
+<div class="container-fluid mb-5">
+    <div class="box">
+        {{>report report=this}}
+        <hr />
+        <div class="is-flex is-align-items-center">
 <a href="/stations/{{../station._id}}/deletereport/{{_id}}" class="button">
     {{>icons/delete}}
 </a>
+        </div>
+    </div>
+
 
 {{/each}}

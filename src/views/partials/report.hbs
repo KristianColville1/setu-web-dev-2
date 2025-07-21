@@ -1,0 +1,43 @@
+<div class="columns is-multiline is-variable is-1 is-flex is-align-items-stretch min-h-10">
+    {{! First column: Station info }}
+    <div class="column has-background-light p-2 m-1 is-rounded-box">
+        <div class="is-flex is-align-items-center is-justify-content-space-between">
+            <h2 class="is-size-4">{{name}}</h2>
+            <span class="m-2">{{>icons/location}}</span>
+        </div>
+        <p>Lat: {{latitude}}</p>
+        <p>Lon: {{longitude}}</p>
+    </div>
+    {{! Weather card }}
+    <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
+        <div class="is-flex is-align-items-center is-justify-content-space-between">
+            <h2 class="is-size-4">Weather</h2>
+            <span class="m-2">{{>icons/weather}}</span>
+        </div>
+        <p>{{code}}</p>
+    </div>
+    {{! Temp card }}
+    <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
+        <div class="is-flex is-align-items-center is-justify-content-space-between">
+            <h2 class="is-size-4">Temp</h2>
+            <span class="m-2">{{>icons/temperature}}</span>
+        </div>
+        <p>{{temp}}</p>
+    </div>
+    {{! Wind card }}
+    <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
+        <div class="is-flex is-align-items-center is-justify-content-space-between">
+            <h2 class="is-size-4">Wind</h2>
+            <span class="m-2">{{>icons/wind}}</span>
+        </div>
+        <p>{{wind}}</p>
+    </div>
+    {{! Pressure card }}
+    <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
+        <div class="is-flex is-align-items-center is-justify-content-space-between">
+            <h2 class="is-size-4">Pressure</h2>
+            <span class="m-2">{{>icons/pressure}}</span>
+        </div>
+        <p>{{pressure}}</p>
+    </div>
+</div>

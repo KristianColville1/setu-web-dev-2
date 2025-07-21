@@ -1,39 +1,10 @@
 
     {{#each stations}}
-    <div class="box box-link-hover-shadow">
-        <div class="columns is-vcentered is-flex is-align-items-stretch">
-            <div class="column has-background-light">
-                <h2 class="title">
-                    {{name}}
-                </h2>
-                <p class="subtitle">
-                    Lat: {{latitude}}
-                </p>
-                <p class="subtitle">
-                    Lon: {{longitude}}
-                </p>
-            </div>
-            <div class="column has-background-light">
-                <h2 class="title">
-                    Weather
-                </h2>
-            </div>
-            <div class="column has-background-light">
-                <h2 class="title">
-                    Temp
-                </h2>
-            </div>
-            <div class="column has-background-light">
-                <h2 class="title">
-                    Wind
-                </h2>
-            </div>
-                        <div class="column has-background-light">
-                            <h2 class="title">
-                                Pressure
-                            </h2>
-                        </div>
-            <div class="column is-narrow has-background-light">
+    <div class="container-fluid mb-5">
+        <div class="box">
+            {{>report name=name latitude=latitude longitude=longitude}}
+            <hr />
+            <div class="is-flex is-align-items-center">
                 <a href="/station/{{_id}}" class="button">
                     {{>icons/open}}
                 </a>

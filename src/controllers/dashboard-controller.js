@@ -1,7 +1,6 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 export const dashboardController = {
-
   async index(request, response) {
     const user = await accountsController.getLoggedInUser(request);
     if (!user) {
@@ -11,7 +10,7 @@ export const dashboardController = {
     stations.sort((a, b) => a.name.localeCompare(b.name)); // Sort stations by name
     const viewData = {
       title: "WeatherTop Dashboard",
-      stations: stations,
+      stations: stations
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);

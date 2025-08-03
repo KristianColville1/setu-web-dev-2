@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="/assets/css/global.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="is-flex is-flex-direction-column" style="min-height: 100vh;">
+    <div class="container" style="flex: 1 0 auto;">
         {{{body}}}
+    </div>
+    <div style="flex-shrink: 0;">
+        {{> footer}}
     </div>
 </body>
 

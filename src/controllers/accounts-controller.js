@@ -9,6 +9,9 @@ export const accountsController = {
     if (userEmail) {
       response.redirect("/dashboard");
       return;
+    } else {
+      response.redirect("/login");
+      return;
     }
     const viewData = {
       title: "Login or Signup",

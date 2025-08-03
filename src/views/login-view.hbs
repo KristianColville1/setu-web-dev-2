@@ -1,17 +1,41 @@
 {{> welcome-menu active="login"}}
 
 <section class="section">
-    <h1 class="title">Log in</h1>
-    <form action="/authenticate" method="POST">
-        <div class="field">
-            <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email">
+    <div class="columns is-vcentered">
+
+        <div class="column has-text-centered">
+            <img src="/assets/imgs/image.png" alt="WeatherTop Logo" class="image" style="max-width: 100%;">
         </div>
-        <div class="field">
-            <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password"
-                name="password">
+        <div class="column is-justify-content-center is-align-items-center box">
+            <form action="/authenticate" method="POST" class="">
+                <h1 class="title">Log in</h1>
+                <div class="field">
+                    <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email"
+                        name="email">
+                </div>
+                <div class="field">
+                    <label class="label">Password</label> <input class="input" type="password"
+                        placeholder="Enter Password" name="password">
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember" checked>
+                            Remember me
+                        </label>
+                    </p>
+                </div>
+                <div class="field">
+                    <div class="is-flex is-justify-content-space-between is-flex-direction-column-mobile">
+                        <a href="/signup">Don't have an account? Sign up</a>
+                        <a href="/forgot-password">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <button class="button is-link">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="field is-grouped">
-            <button class="button is-link">Submit</button>
-        </div>
-    </form>
+    </div>
+
 </section>

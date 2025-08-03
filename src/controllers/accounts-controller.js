@@ -4,6 +4,12 @@ const cookieName = "weatherTop";
 
 export const accountsController = {
   index(request, response) {
+    // check if user is already logged in
+    const userEmail = request.cookies[cookieName];
+    if (userEmail) {
+      response.redirect("/dashboard");
+      return;
+    }
     const viewData = {
       title: "Login or Signup",
     };

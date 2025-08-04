@@ -38,6 +38,19 @@ export const accountsController = {
     response.render("signup-view", viewData);
   },
 
+  async myAccount(request, response) {
+    const userEmail = request.cookies[cookieName];
+    if (!userEmail) {
+      return response.redirect("/login");
+    }
+    const user = await userStore.getUserByEmail(userEmail);
+    const viewData = {
+      title: "My Account",
+      user: user,
+    };
+    response.render("my-account-view", viewData);
+  },
+
   async register(request, response) {
     const user = request.body;
     await userStore.addUser(user);
@@ -68,5 +81,5 @@ export const accountsController = {
       return null;
     }
     return user;
-  }
+  },
 };

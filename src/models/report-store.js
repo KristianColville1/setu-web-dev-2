@@ -13,6 +13,7 @@ export const reportStore = {
     await db.read();
     report._id = v4();
     report.stationID = stationID;
+    report.createdAt = new Date().toISOString(); // Add createdAt timestamp
     db.data.reports.push(report);
     await db.write();
     return report;

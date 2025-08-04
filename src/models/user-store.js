@@ -34,6 +34,15 @@ export const userStore = {
     await db.write();
   },
 
+  async updateUser(user) {
+    await db.read();
+    const index = db.data.users.findIndex((u) => u._id === user._id);
+    if (index !== -1) {
+      db.data.users[index] = user;
+      await db.write();
+    }
+  },
+
   async deleteAll() {
     db.data.users = [];
     await db.write();

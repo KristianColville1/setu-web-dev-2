@@ -51,6 +51,23 @@ export const accountsController = {
     response.render("my-account-view", viewData);
   },
 
+  async updateMyAccount(request, response){
+    const userEmail = request.cookies[cookieName];
+    if (!userEmail) {
+      return response.redirect("/login");
+    }
+    const user = await userStore.getUserByEmail(userEmail);
+    if (!user) {
+      return response.redirect("/login");
+    }
+    const updatedUser = {
+      ...user,
+      ...request.body,
+    };
+    await userStore.updateUser(updatedUser);
+    response.redirect("/my-account");
+  },
+
   async register(request, response) {
     const user = request.body;
     await userStore.addUser(user);

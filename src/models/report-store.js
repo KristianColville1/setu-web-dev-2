@@ -28,6 +28,83 @@ export const reportStore = {
     return db.data.reports.find((report) => report._id === id);
   },
 
+  async getCodeByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return "N/A";
+    return reports[reports.length - 1].code;
+  },
+
+  async getWindDirectionByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return "N/A";
+    return reports[reports.length - 1].windDirection;
+  },
+
+  async getTempByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return reports[reports.length - 1].temp;
+  },
+
+  async getWindSpeedByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return "N/A";
+    return reports[reports.length - 1].windSpeed;
+  },
+
+  async getPressureByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return reports[reports.length - 1].pressure;
+  },
+
+  async getMinTempByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return Math.min(...reports.map((report) => parseFloat(report.temp)));
+  },
+
+  async getMaxTempByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return Math.max(...reports.map((report) => parseFloat(report.temp)));
+  },
+
+  async getMinWindSpeedByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return Math.min(...reports.map((report) => parseFloat(report.windSpeed)));
+  },
+
+  async getMaxWindSpeedByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return Math.max(...reports.map((report) => parseFloat(report.windSpeed)));
+  },
+
+  async getMinPressureByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return Math.min(...reports.map((report) => parseFloat(report.pressure)));
+  },
+
+  async getMaxPressureByStationId(stationID) {
+    await db.read();
+    const reports = db.data.reports.filter((report) => report.stationID === stationID);
+    if (reports.length === 0) return 0.0;
+    return Math.max(...reports.map((report) => parseFloat(report.pressure)));
+  },
+
   async deleteReport(id) {
     await db.read();
     const index = db.data.reports.findIndex((report) => report._id === id);

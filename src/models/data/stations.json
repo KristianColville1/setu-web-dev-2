@@ -3,10 +3,10 @@
   "stations": [
     {
       "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
-      "name": "Tramore",
-      "latitude": "00",
-      "longitude": "00",
-      "_id": "e45f03fd-1b2d-49e4-a379-fb6f34410469"
+      "name": "test",
+      "latitude": "",
+      "longitude": "",
+      "_id": "4ef86279-5ab4-4b1d-8c0b-ba217ee1a671"
     }
   ]
 }

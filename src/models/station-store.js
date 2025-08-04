@@ -48,6 +48,7 @@ export const stationStore = {
   async getStationsByUserId(userId) {
     await db.read();
     const stations = db.data.stations.filter((station) => station.userId === userId);
+    stations.sort((a, b) => a.name.localeCompare(b.name)); // put in alphabetical order by name
     for (const station of stations) {
       station.code = await reportStore.getCodeByStationId(station._id);
       station.windDirection = await reportStore.getWindDirectionByStationId(station._id);
@@ -69,11 +70,19 @@ export const stationStore = {
     await db.read();
     const index = db.data.stations.findIndex((station) => station._id === id);
     db.data.stations.splice(index, 1);
+
+    // delete all reports associated with this station
+    const reports = await reportStore.getReportsByStationId(id);
+    for (const report of reports) {
+      await reportStore.deleteReport(report._id);
+    }
     await db.write();
   },
 
   async deleteAllStations() {
     db.data.stations = [];
+    await db.write();
+    db.data.reports = []; // delete all reports associated with all stations
     await db.write();
   },
 };

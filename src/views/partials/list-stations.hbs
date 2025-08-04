@@ -2,7 +2,7 @@
     {{#each stations}}
     <div class="container-fluid mb-5">
         <div class="box">
-            {{>report name=name latitude=latitude longitude=longitude}}
+            {{>report name=name latitude=latitude longitude=longitude minTemp=minTemp maxTemp=maxTemp minWindSpeed=minWindSpeed maxWindSpeed=maxWindSpeed minPressure=minPressure maxPressure=maxPressure code=code windDirection=windDirection windSpeed=windSpeed temp=temp pressure=pressure}}
             <hr />
             <div class="is-flex is-align-items-center">
                 <a href="/station/{{_id}}" class="button">

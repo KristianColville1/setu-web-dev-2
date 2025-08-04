@@ -1,6 +1,6 @@
 <div class="columns is-multiline is-variable is-1 is-flex is-align-items-stretch min-h-10">
     {{! First column: Station info }}
-    <div class="column has-background-light p-2 m-1 is-rounded-box">
+    <div class="column p-2 m-1 is-rounded-box">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
             <h2 class="is-size-4">{{name}}</h2>
             <span class="m-2">{{>icons/location}}</span>
@@ -9,12 +9,12 @@
         <p>Lon: {{longitude}}</p>
     </div>
     {{! Weather card }}
-    <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
+    <div class="column p-2 has-background-light m-1 is-rounded-box">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
             <h2 class="is-size-4">Weather</h2>
-            <span class="m-2">{{>icons/weather}}</span>
+            <span class="m-2 weather-icon" data-weather-code="{{code}}">{{>icons/weather}}</span>
         </div>
-        <p>{{code}}</p>
+        <p class="weather-description"></p>
     </div>
     {{! Temp card }}
     <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
@@ -22,7 +22,13 @@
             <h2 class="is-size-4">Temp</h2>
             <span class="m-2">{{>icons/temperature}}</span>
         </div>
-        <p>{{temp}}</p>
+        <p class="temperature" data-temp="{{temp}}"></p>
+        {{#if maxTemp}}
+          <div class="min-max-temp">
+            <div>Max: {{maxTemp}} °C</div>
+            <div>Min: {{minTemp}} °C</div>
+          </div>
+        {{/if}}
     </div>
     {{! Wind card }}
     <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
@@ -30,7 +36,15 @@
             <h2 class="is-size-4">Wind</h2>
             <span class="m-2">{{>icons/wind}}</span>
         </div>
-        <p>{{wind}}</p>
+        <p>{{windSpeed}} bft</p>
+        <p data-wind-direction="{{windDirection}}" class="report-wind-direction"></p>
+        {{#if maxWindSpeed}}
+          <div class="min-max-wind-speed">
+                        <div>Max: {{maxWindSpeed}} bft</div>
+            <div>Min: {{minWindSpeed}} bft</div>
+
+          </div>
+        {{/if}}
     </div>
     {{! Pressure card }}
     <div class="column has-background-dark has-text-white p-2 m-1 is-rounded-box">
@@ -38,6 +52,13 @@
             <h2 class="is-size-4">Pressure</h2>
             <span class="m-2">{{>icons/pressure}}</span>
         </div>
-        <p>{{pressure}}</p>
+        <p>{{pressure}} hpa</p>
+        {{#if maxPressure}}
+          <div class="min-max-pressure">
+                        <div>Max: {{maxPressure}} hpa</div>
+            <div>Min: {{minPressure}} hpa</div>
+
+          </div>
+        {{/if}}
     </div>
 </div>

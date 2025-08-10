@@ -27,7 +27,6 @@ export const stationStore = {
     const station = db.data.stations.find((station) => station._id === id);
     station.reports = await reportStore.getReportsByStationId(id);
     await stationStore.getStationDetails(station);
-    console.log(station);
     for (const report of station.reports) {
       report.name = station.name;
       report.latitude = station.latitude;

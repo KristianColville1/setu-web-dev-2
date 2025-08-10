@@ -1,5 +1,6 @@
+import "dotenv/config";
 import { reportStore } from "../models/report-store.js";
-
+import {stationStore} from "../models/station-store.js";
 export const reportController = {
   async addReport(request, response) {
     const stationID = request.params.id;
@@ -26,4 +27,40 @@ export const reportController = {
     await reportStore.deleteReport(reportID);
     response.redirect("/station/" + stationID);
   },
+
+  async autoGenerateReport(request, response){
+    console.log("Auto generating report");
+    const stationID = request.params.id;
+    const station = await stationStore.getStationByID(stationID);
+    const apiKey = process.env.WEATHER_API_KEY;
+    const link = `https://api.openweathermap.org/data/3.0/onecall?lat=${station.latitude}&lon=${station.longitude}&exclude=hourly,minutely&appid=${apiKey}`;
+    try {
+      const req = await fetch(link,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+
+      if (!req.ok) {
+        throw new Error(`HTTP error! status: ${req.status}`);
+      }
+      const data = await req.json();
+      const newReport = {
+        code: data.current.weather[0].id,
+        temp: data.current.temp,
+        windSpeed: data.current.wind_speed,
+        windDirection: data.current.wind_deg,
+        pressure: data.current.pressure,
+      };
+          await reportStore.addReport(stationID, newReport);
+          response.redirect(`/station/${stationID}`);
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
+      response.status(error.status || 500).send("Error fetching weather data");
+      return;
+    }
+  }
 };

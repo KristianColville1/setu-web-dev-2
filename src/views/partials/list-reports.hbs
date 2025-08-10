@@ -1,15 +1,47 @@
-{{#each station.reports}}
+{{>report
+name=station.name
+latitude=station.latitude
+longitude=station.longitude
+minTemp=station.minTemp
+maxTemp=station.maxTemp
+minWindSpeed=station.minWindSpeed
+maxWindSpeed=station.maxWindSpeed
+minPressure=station.minPressure
+maxPressure=station.maxPressure
+code=station.code
+windDirection=station.windDirection
+windSpeed=station.windSpeed
+temp=station.temp
+pressure=station.pressure
+}}
 
-<div class="container-fluid mb-5">
-    <div class="box">
-        {{>report report=this}}
-        <hr />
-        <div class="is-flex is-align-items-center">
-            <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">
-                {{>icons/delete}}
-            </a>
-        </div>
-    </div>
-
-
-    {{/each}}
+<table class="table is-fullwidth card">
+    <thead>
+        <tr>
+            <th>Date/Time</th>
+            <th>Code</th>
+            <th>Temp</th>
+            <th>Wind Speed</th>
+            <th>Wind Direction</th>
+            <th>Pressure</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each station.reports}}
+        <tr>
+            <td>{{createdAt}}</td>
+            <td>{{code}}</td>
+            <td>{{temp}} C</td>
+            <td>{{windSpeed}}kMh</td>
+            <td>{{windDirection}}Deg</td>
+            <td>{{pressure}}hPa</td>
+            <td>
+                <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">
+                    {{>icons/delete}}
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

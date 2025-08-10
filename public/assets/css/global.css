@@ -12,3 +12,7 @@
 .is-rounded-box {
     border-radius: 0.5rem
 }
+
+.has-border {
+    border: 1px solid lightslategray;
+}

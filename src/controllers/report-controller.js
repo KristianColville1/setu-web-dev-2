@@ -34,6 +34,7 @@ export const reportController = {
     const station = await stationStore.getStationByID(stationID);
     const apiKey = process.env.WEATHER_API_KEY;
     const link = `https://api.openweathermap.org/data/3.0/onecall?lat=${station.latitude}&lon=${station.longitude}&exclude=hourly,minutely&appid=${apiKey}`;
+    console.log(`Fetching weather data from: ${link}`);
     try {
       const req = await fetch(link,
         {
@@ -48,9 +49,10 @@ export const reportController = {
         throw new Error(`HTTP error! status: ${req.status}`);
       }
       const data = await req.json();
+      console.log("Weather data fetched successfully", data);
       const newReport = {
         code: data.current.weather[0].id,
-        temp: data.current.temp,
+        temp: Number((data.current.temp - 273.15).toFixed(2)), // Convert from Kelvin to Celsius
         windSpeed: data.current.wind_speed,
         windDirection: data.current.wind_deg,
         pressure: data.current.pressure,

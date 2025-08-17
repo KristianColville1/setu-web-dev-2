@@ -2,11 +2,11 @@
     {{! First column: Station info }}
     <div class="column p-2 m-1 is-rounded-box has-border">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
-            <h2 class="is-size-4">{{name}}</h2>
+            <h2 class="is-size-4 name">{{name}}</h2>
             <span class="m-2">{{>icons/location}}</span>
         </div>
-        <p>Lat: {{latitude}}</p>
-        <p>Lon: {{longitude}}</p>
+        <p class="latitude">Lat: {{latitude}}</p>
+        <p class="longitude">Lon: {{longitude}}</p>
     </div>
     {{! Weather card }}
     <div class="column p-2 has-background-light m-1 is-rounded-box">

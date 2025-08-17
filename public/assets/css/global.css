@@ -16,3 +16,7 @@
 .has-border {
     border: 1px solid lightslategray;
 }
+
+#map {
+    height: 350px;
+}

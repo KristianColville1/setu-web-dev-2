@@ -4,7 +4,7 @@ import {convertCelsiusToFahrenheit} from "../utils/weather-utils.js";
 document.addEventListener("DOMContentLoaded", () => {
     loadWeatherIcons();
     loadTemperatures();
-
+    loadLocationsOnMap();
 });
 
 const loadWeatherIcons = () => {
@@ -38,4 +38,41 @@ const loadTemperatures = () => {
             element.innerText = `${0}°C / ${fahrenheit.toFixed(2)}°F`;
         }
     });
+}
+
+const loadLocationsOnMap = () => {
+  const stations = document.querySelectorAll(".station");
+  if (stations.length === 0) return;
+  var map = L.map("map");
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
+  const markerCoords = [];
+
+  stations.forEach((station) => {
+    const latitude = station.querySelector(".latitude").innerText.split(": ")[1];
+    const longitude = station.querySelector(".longitude").innerText.split(": ")[1];
+    const name = station.querySelector(".name").innerText;
+    console.log(`Adding marker for station at ${latitude}, ${longitude}`);
+    const marker = L.marker([latitude, longitude]).addTo(map);
+    marker.bindPopup(`<b>${name}</b>`);
+    markerCoords.push([latitude, longitude]);
+  });
+
+  if (markerCoords.length > 0) {
+    map.fitBounds(markerCoords);
+  }
+
+  const addStationForm = document.querySelector(".add-station-form");
+  // find add-latitude, add-longitude inputs and auto fill on location click
+  const latitudeInput = addStationForm.querySelector(".add-latitude");
+  const longitudeInput = addStationForm.querySelector(".add-longitude");
+  map.on("click", (e) => {
+    const lat = e.latlng.lat.toFixed(6);
+    const lng = e.latlng.lng.toFixed(6);
+    latitudeInput.value = lat;
+    longitudeInput.value = lng;
+  });
+
 }

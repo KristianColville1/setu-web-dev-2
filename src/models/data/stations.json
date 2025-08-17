@@ -11,9 +11,30 @@
     {
       "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
       "name": "Dunmore, IE",
-      "latitude": "53.617",
-      "longitude": "-8.733",
-      "_id": "53d29a36-e178-4c1e-bc20-fb25da2737ea"
+      "latitude": "52.149",
+      "longitude": "-6.994",
+      "_id": "d172b674-236f-4bfe-9992-165fbbd7dee9"
+    },
+    {
+      "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
+      "name": "Wexford, IE",
+      "latitude": "52.337856",
+      "longitude": "-6.461334",
+      "_id": "ffc60fc5-0acc-42d1-bad7-4296e91b25a6"
+    },
+    {
+      "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
+      "name": "Dungarvan, IE",
+      "latitude": "52.089211",
+      "longitude": "-7.629318",
+      "_id": "a3c2fb0f-d65b-4bd3-8955-deb61b806585"
+    },
+    {
+      "userId": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed",
+      "name": "Youghal, IE",
+      "latitude": "51.949450",
+      "longitude": "-7.843165",
+      "_id": "6aecad78-644c-4bcb-bef8-42e9a0739a75"
     }
   ]
 }

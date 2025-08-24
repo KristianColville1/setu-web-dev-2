@@ -1,6 +1,9 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 export const dashboardController = {
+  /**
+   * Renders the dashboard view with the user's stations.
+   */
   async index(request, response) {
     const user = await accountsController.getLoggedInUser(request);
     if (!user) {

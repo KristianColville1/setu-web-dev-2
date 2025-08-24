@@ -94,16 +94,22 @@ export const accountsController = {
 
   /**
    * Authenticates a user and sets the login cookie.
+   * Always responds with JSON for AJAX requests.
    */
   async authenticate(request, response) {
-    const user = await userStore.getUserByEmail(request.body.email);
+    const body = request.body;
+    const user = await userStore.getUserByEmail(body.email);
+    console.log("Authenticating user:", body.email);
     if (user) {
-      response.cookie(cookieName, user.email);
-      console.log(`logging in ${user.email}`);
-      response.redirect("/dashboard");
-    } else {
-      response.redirect("/login");
+      const valid = await userStore.verifyUserPassword(body.email, body.password);
+      if (valid) {
+        response.cookie(cookieName, user.email);
+        console.log(`logging in ${user.email}`);
+        response.status(200).json({ redirect: "/dashboard" });
+        return;
+      }
     }
+    response.status(401).json({ error: "Incorrect email/password" });
   },
 
   /**

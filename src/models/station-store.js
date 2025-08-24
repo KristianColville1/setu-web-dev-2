@@ -5,6 +5,9 @@ import { reportStore } from "./report-store.js";
 const db = initStore("stations");
 
 export const stationStore = {
+  /**
+   * Retrieves all stations and populates their details.
+   */
   async getAllStations() {
     await db.read();
     const stations = db.data.stations || [];
@@ -14,6 +17,9 @@ export const stationStore = {
     return stations;
   },
 
+  /**
+   * Adds a new station to the store and returns it.
+   */
   async addStation(station) {
     await db.read();
     station._id = v4();
@@ -22,6 +28,9 @@ export const stationStore = {
     return station;
   },
 
+  /**
+   * Retrieves a station by ID, including its reports and details.
+   */
   async getStationByID(id) {
     await db.read();
     const station = db.data.stations.find((station) => station._id === id);
@@ -35,6 +44,9 @@ export const stationStore = {
     return station;
   },
 
+  /**
+   * Retrieves all stations for a specific user, sorted by name.
+   */
   async getStationsByUserId(userId) {
     await db.read();
     const stations = db.data.stations.filter((station) => station.userId === userId);
@@ -45,6 +57,9 @@ export const stationStore = {
     return stations;
   },
 
+  /**
+   * Populates a station object with its latest report data and statistics.
+   */
   async getStationDetails(station){
       station.code = await reportStore.getCodeByStationId(station._id);
       station.windDirection = await reportStore.getWindDirectionByStationId(station._id);
@@ -60,6 +75,9 @@ export const stationStore = {
       station.maxPressure = await reportStore.getMaxPressureByStationId(station._id);
   },
 
+  /**
+   * Deletes a station by ID and all associated reports.
+   */
   async deleteStationByID(id) {
     await db.read();
     const index = db.data.stations.findIndex((station) => station._id === id);
@@ -73,6 +91,9 @@ export const stationStore = {
     await db.write();
   },
 
+  /**
+   * Deletes all stations and all associated reports.
+   */
   async deleteAllStations() {
     db.data.stations = [];
     await db.write();

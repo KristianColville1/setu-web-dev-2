@@ -17,11 +17,9 @@
     <script src="/assets/js/main/navbar.js" type="module"></script>
 </head>
 
-<body class="container-fluid" style="min-height: 100vh;">
-    <div class="container">{{{body}}}</div>
-    <div>
-        {{> footer}}
-    </div>
+<body class="container-fluid" style="min-height: 100vh; display: flex; flex-direction: column;">
+    <div class="container" style="flex: 1 0 auto;">{{{body}}}</div>
+    {{> footer}}
 </body>
 
 </html>

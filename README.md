@@ -6,7 +6,7 @@ Site credentials:
 username:test@test.com
 password: password
 
-![Project Image](doc/images/responsive-website.png)
+![1756049536698](image/README/1756049536698.png)
 
 [Visit WeatherTop](https://setu-web-dev-2.onrender.com/)
 
@@ -239,6 +239,15 @@ Features:
 
 ## Testing
 ### Google Lighthouse Results
+
+Dashboard
+![1756049322521](image/README/1756049322521.png)
+
+Station View
+![1756049410057](image/README/1756049410057.png)
+
+My Account View
+![1756049453265](image/README/1756049453265.png)
 
 ## Bugs
 

@@ -70,6 +70,16 @@
       "_id": "6cc2e325-2fc0-4fd9-9281-1aefba04e0ed",
       "stationID": "328862e8-4654-4e51-a8c7-589e391ee3c1",
       "createdAt": "2025-08-23T08:06:47.836Z"
+    },
+    {
+      "code": 804,
+      "temp": 18.3,
+      "windSpeed": 3.3,
+      "windDirection": 159,
+      "pressure": 1017,
+      "_id": "ee1dfe69-4024-4ae5-808a-d9334ccaf786",
+      "stationID": "328862e8-4654-4e51-a8c7-589e391ee3c1",
+      "createdAt": "2025-08-24T08:45:43.956Z"
     }
   ]
 }

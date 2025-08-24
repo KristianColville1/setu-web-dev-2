@@ -1,5 +1,9 @@
 :root {
-    --green-blue: #aefff3;
+    --celeste: #aefff3ff;
+    --bright-pink-crayola: #ff6384ff;
+    --cadet-gray: #9ea5acff;
+    --charcoal: #2c4251ff;
+    --yellow-green: #b6c649ff;
 }
 
 /* Modifiers */
@@ -16,17 +20,19 @@
 }
 
 .has-border {
-    border: 1px solid lightslategray;
+    border: 1px solid var(--cadet-gray);
 }
 
 .has-bg-green-blue {
-    background-color: var(--green-blue);
+    background-color: var(--celeste);
 }
 
-.is-primary, .is-selected {
-    background-color: var(--green-blue) !important;
+.is-primary,
+.is-selected {
+    background-color: var(--celeste) !important;
     color: black !important;
 }
+
 #map {
     height: 350px;
 }
@@ -46,7 +52,7 @@
 /* the small pointer triangle */
 .graph-svg-tip .svg-pointer {
     fill: #fff !important;
-    stroke: #ccc !important;
+    stroke: #a0a0a0 !important;
 }
 
 /* Make Bulma burger spans thicker and more visible */

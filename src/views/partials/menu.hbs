@@ -9,11 +9,16 @@
                 <span aria-hidden="true"></span>
               </a>
   </div>
-  {{#if station.name}}
-  <div class="navbar-item">
-    <div class="has-text-weight-bold">{{station.name}} Weather Station</div>
-  </div>
-  {{/if}}
+{{#if station.name}}
+<div class="navbar-item">
+  <div class="has-text-weight-bold">{{station.name}} Weather Station</div>
+</div>
+{{else}}
+<div class="navbar-item">
+  <div class="has-text-weight-bold">WeatherTop Stations</div>
+</div>
+{{/if}}
+
 
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">

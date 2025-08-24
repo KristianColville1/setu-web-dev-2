@@ -1,4 +1,6 @@
-:root {}
+:root {
+    --green-blue: #aefff3;
+}
 
 /* Modifiers */
 .h-100 {
@@ -17,6 +19,14 @@
     border: 1px solid lightslategray;
 }
 
+.has-bg-green-blue {
+    background-color: var(--green-blue);
+}
+
+.is-primary, .is-selected {
+    background-color: var(--green-blue) !important;
+    color: black !important;
+}
 #map {
     height: 350px;
 }
@@ -37,4 +47,12 @@
 .graph-svg-tip .svg-pointer {
     fill: #fff !important;
     stroke: #ccc !important;
+}
+
+/* Make Bulma burger spans thicker and more visible */
+.navbar-burger span {
+    height: 2px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: block;
 }

@@ -50,6 +50,26 @@
       "_id": "0a6fe9d9-ccad-4f8a-a420-1755fbab5392",
       "stationID": "a3c2fb0f-d65b-4bd3-8955-deb61b806585",
       "createdAt": "2025-08-17T14:06:49.886Z"
+    },
+    {
+      "code": 804,
+      "temp": 19.49,
+      "windSpeed": 0.45,
+      "windDirection": 231,
+      "pressure": 1019,
+      "_id": "d53b54f4-d32f-48d9-957a-13223b9ce3f1",
+      "stationID": "a3c2fb0f-d65b-4bd3-8955-deb61b806585",
+      "createdAt": "2025-08-23T08:05:34.168Z"
+    },
+    {
+      "code": 804,
+      "temp": 17.37,
+      "windSpeed": 1.04,
+      "windDirection": 193,
+      "pressure": 1020,
+      "_id": "6cc2e325-2fc0-4fd9-9281-1aefba04e0ed",
+      "stationID": "328862e8-4654-4e51-a8c7-589e391ee3c1",
+      "createdAt": "2025-08-23T08:06:47.836Z"
     }
   ]
 }

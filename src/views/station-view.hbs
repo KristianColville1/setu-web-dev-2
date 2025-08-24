@@ -17,10 +17,24 @@
     temp=station.temp
     pressure=station.pressure
     }}
-    <div id="station-chart" class="box"></div>
+
+<div id="report-charts-container" class="box">
+    <div class="buttons has-addons is-centered mb-4" id="chart-type-group">
+        <button class="button is-small is-link is-selected" data-chart="temperature">Temperature</button>
+        <button class="button is-small" data-chart="wind">Wind</button>
+        <button class="button is-small" data-chart="pressure">Pressure</button>
+    </div>
+    <div class="is-flex is-justify-content-flex-end mb-2">
+        <div class="buttons has-addons" id="chart-view-group">
+            <button class="button is-small is-link is-selected" data-view="line">Line</button>
+            <button class="button is-small" data-view="bar">Bar</button>
+        </div>
+    </div>
+    <div id="station-chart"></div>
+</div>
+
     {{> list-reports}}
     {{> add-report}}
 </section>
-
 
 <script src="/assets/js/main/reports.js" type="module"></script>

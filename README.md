@@ -147,17 +147,17 @@ The result is a layout that feels natural whether you’re tracking a storm on a
 
 ### Icons
 
-| Logo                     | Description           |
-|--------------------------|-----------------------|
-| ![01d.svg](/public/assets/imgs/01d.svg) | Clear sky             |
-| ![02d.svg](/public/assets/imgs/02d.svg) | Few clouds            |
-| ![03d.svg](/public/assets/imgs/03d.svg) | Scattered clouds      |
-| ![04d.svg](/public/assets/imgs/04d.svg) | Broken clouds         |
-| ![09d.svg](/public/assets/imgs/09d.svg) | Shower rain           |
-| ![10d.svg](/public/assets/imgs/10d.svg) | Rain                  |
-| ![11d.svg](/public/assets/imgs/11d.svg) | Thunderstorm          |
-| ![13d.svg](/public/assets/imgs/13d.svg) | Snow                  |
-| ![50d.svg](/public/assets/imgs/50d.svg) | Mist                  |
+| Logo                                                  | Description           |
+|-------------------------------------------------------|-----------------------|
+| ![01d.svg](/public/assets/imgs/weather-icons/01d.svg) | Clear sky             |
+| ![02d.svg](/public/assets/imgs/weather-icons/02d.svg) | Few clouds            |
+| ![03d.svg](/public/assets/imgs/weather-icons/03d.svg) | Scattered clouds      |
+| ![04d.svg](/public/assets/imgs/weather-icons/04d.svg) | Broken clouds         |
+| ![09d.svg](/public/assets/imgs/weather-icons/09d.svg) | Shower rain           |
+| ![10d.svg](/public/assets/imgs/weather-icons/10d.svg) | Rain                  |
+| ![11d.svg](/public/assets/imgs/weather-icons/11d.svg) | Thunderstorm          |
+| ![13d.svg](/public/assets/imgs/weather-icons/13d.svg) | Snow                  |
+| ![50d.svg](/public/assets/imgs/weather-icons/50d.svg) | Mist                  |
 
 
 ### Leveraging Bulma

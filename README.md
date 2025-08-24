@@ -186,7 +186,9 @@ We only added bespoke styles when Bulma couldn’t cover a specific need, keepin
 - [Favicon](https://favicon.io/) - A favicon generator for the web app.
 - [GeeksForGeeks](https://www.geeksforgeeks.org/node-js/node-js-crypto-pbkdf2-method/) - Referenced for working with NodeJs and building a salt & hashing password system
 - [Photopea](https://www.photopea.com/) - An online photo editing tool used to customize the logo for the project.
-
+- [Render](https://render.com/) - For deploying my project and using compute resources.
+- [Frappe](https://frappe.io/charts/docs) - For the project charts.
+- [LeafletJs](https://leafletjs.com/examples/quick-start/) - For map functionality to show stations on world map.
 ## Features
 ### Baseline
 

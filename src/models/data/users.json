@@ -4,14 +4,14 @@
     {
       "firstName": "kristian",
       "lastName": "colville",
-      "email": "kristian@gmail.com",
+      "email": "test@test.com",
       "password": "5a0eb4a74d2c4d09e7ca26ff0770c073:e7fc64df4bac2276fe39f6a596b3bbda2db2a286a79c9ce1232928319c92faef54e631117ec373c2872a0a9e7b0a406607490127ad026fcbbde67bbb532f3cbb",
       "_id": "567b2f6c-ef3e-4518-bf90-8ad9ec5aeeed"
     },
     {
       "firstName": "Test",
       "lastName": "test",
-      "email": "test@test.com",
+      "email": "test1@test.com",
       "password": "3ecee905591de366f04edc9a31aa7645:2b0fe094aab627c759eda4d0bea7ecb20dfb4fad914aade3030a916b3b34479f4cf54905f14ce810ad018d98896c25002d39594f883bc49381a17752f04fa259",
       "_id": "dbe12f1f-c365-43f6-883f-146c009aa65e"
     }

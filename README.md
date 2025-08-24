@@ -2,6 +2,10 @@
 
 Developer: Kristian Colville
 
+Site credentials:
+username:test@test.com
+password: password
+
 ![Project Image](doc/images/responsive-website.png)
 
 [Visit WeatherTop](https://setu-web-dev-2.onrender.com/)

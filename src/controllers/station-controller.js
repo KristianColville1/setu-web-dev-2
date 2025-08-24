@@ -2,6 +2,9 @@ import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 
 export const stationController = {
+  /**
+   * Renders the station details view for a given station ID.
+   */
   async index(request, response) {
     const station = await stationStore.getStationByID(request.params.id);
     const viewData = {
@@ -11,6 +14,9 @@ export const stationController = {
     response.render("station-view", viewData);
   },
 
+  /**
+   * Adds a new station for the authenticated user and redirects to dashboard.
+   */
   async addStation(request, response) {
     const user = await accountsController.getAuthenticatedUser(request, response);
     if (!user) return;
@@ -25,6 +31,9 @@ export const stationController = {
     response.redirect("/dashboard");
   },
 
+  /**
+   * Deletes a station by ID for the authenticated user and redirects to dashboard.
+   */
   async deleteStation(request, response) {
     const user = await accountsController.getAuthenticatedUser(request, response);
     if (!user) return;
